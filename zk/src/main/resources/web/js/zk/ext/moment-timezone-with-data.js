@@ -690,6 +690,7 @@
 		momentProperties._z = null;
 	}
 
+	// NOTE: When update time zone data version, please also update the default value of library property "org.zkoss.zk.moment.timezone.data.version" to new version
 	loadData({
 		"version": "2023c",
 		"zones": [
