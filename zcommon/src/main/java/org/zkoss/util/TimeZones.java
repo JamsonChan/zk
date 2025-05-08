@@ -35,6 +35,9 @@ public class TimeZones {
 	 */
 	public static final TimeZone getCurrent() {
 		final TimeZone l = _thdTZone.get();
+		// parse getDefault() value here
+		// JDK 的 old time zone mapping 存在 ZoneInfoFile.class 的 static ver oldMappings 裡面
+		// 列出所有 IANA 區域，把他們的 time zone 轉成 GMT 放入一個 set，GMT格式，我們只支援這些，其他都拋 exception
 		return l != null ? l: TimeZone.getDefault();
 	}
 	/**
